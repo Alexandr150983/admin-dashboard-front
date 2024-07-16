@@ -3,7 +3,7 @@ import { ColorRing } from "react-loader-spinner";
 
 import { LoaderContainer } from "./Loader.styled";
 
-const Loader = () => {
+const Loader: React.FC = () => {
   return (
     <LoaderContainer>
       <ColorRing

@@ -12,7 +12,7 @@ import {
 import logoIcon from "../../assets/images/icons/Logo.svg";
 import pillIcon from "../../assets/images/icons/White_round_pill.svg";
 
-const LoginPage = () => {
+const LoginPage: React.FC = () => {
   return (
     <LoginPageContainer>
       <Logo>
