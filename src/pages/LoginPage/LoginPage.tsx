@@ -10,7 +10,7 @@ import {
   Span,
   Title,
 } from "./LoginPage.styled";
-// import LoginForm from "../../components/LoginForm/LoginForm";
+import LoginForm from "../../components/LoginForm/LoginForm";
 import logoIcon from "../../assets/images/icons/logo.svg";
 import pillIcon from "../../assets/images/icons/white_round_pill.svg";
 import backgroundImage from "../../assets/images/icons/elements.svg";
@@ -28,7 +28,7 @@ const LoginPage: React.FC = () => {
           delivered Say goodbye to all <Span>your healthcare</Span> worries with
           us
         </Title>
-        {/* <LoginForm /> */}
+        <LoginForm />
       </LoginBox>
       <BackgroundImage src={backgroundImage} alt="Background Image" />
     </LoginPageContainer>
