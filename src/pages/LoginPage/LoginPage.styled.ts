@@ -13,3 +13,7 @@ export const LogoText = styled.p``;
 export const LogoSvg = styled.img``;
 
 export const PillSvg = styled.img``;
+
+export const BackgroundImage = styled.img``;
+
+export const Span = styled.span``;
