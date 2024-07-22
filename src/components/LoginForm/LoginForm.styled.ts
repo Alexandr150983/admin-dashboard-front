@@ -1,42 +1,58 @@
 import styled from "styled-components";
 
-export const Form = styled.form`
+const breakpoints = {
+  mobile: "375px",
+  tablet: "768px",
+  desktop: "1440px",
+};
+
+export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 400px;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 89.33vw;
+
+  @media (min-width: ${breakpoints.mobile}) {
+    max-width: 335px;
+  }
 `;
 
 export const Label = styled.label`
-  margin-bottom: 5px;
-  font-weight: bold;
+  display: flex;
+  flex-direction: column;
 `;
 
-export const Input = styled.input`
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+export const StyledField = styled.input`
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(29, 30, 33, 0.4);
+  margin-bottom: 14px;
+  padding: 13px 18px;
+  border: 1px solid rgba(29, 30, 33, 0.1);
+  border-radius: 60px;
+  background-color: var(--background-3);
+  outline: none;
 `;
 
-export const ErrorMessage = styled.span`
-  margin-bottom: 10px;
+export const ErrorMessage = styled.div`
+  margin-left: 20px;
   color: red;
 `;
 
-export const Button = styled.button`
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
+export const LogInButton = styled.button`
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  padding: 13px 18px;
+  margin-top: 26px;
+  background-color: var(--accent);
+  color: var(--background-3);
   border: none;
-  border-radius: 5px;
+  border-radius: 60px;
   cursor: pointer;
   &:hover {
-    background-color: #0056b3;
+    background-color: var(--background-4);
+    transition: var(--anim);
   }
 `;

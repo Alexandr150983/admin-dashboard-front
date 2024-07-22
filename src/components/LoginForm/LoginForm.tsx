@@ -2,7 +2,13 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { Button, ErrorMessage, Form, Input, Label } from "./LoginForm.styled";
+import {
+  ErrorMessage,
+  Label,
+  LogInButton,
+  StyledField,
+  StyledForm,
+} from "./LoginForm.styled";
 
 const schema = yup.object().shape({
   email: yup.string().email("Invalid email").required("Required"),
@@ -27,23 +33,31 @@ const LoginForm: React.FC = () => {
 
   const onSubmit = handleSubmit((data) => {
     console.log(data);
-    // Тут ви можете додати логіку для обробки даних форми, наприклад, авторизацію користувача
+    // Логіка
   });
 
   return (
-    <Form onSubmit={onSubmit}>
-      <Label>Email</Label>
-      <Input {...register("email")} />
-      {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
-
-      <Label>Password</Label>
-      <Input type="password" {...register("password")} />
-      {errors.password && (
-        <ErrorMessage>{errors.password.message}</ErrorMessage>
-      )}
-
-      <Button type="submit">Login</Button>
-    </Form>
+    <StyledForm autoComplete="off" onSubmit={onSubmit}>
+      <Label htmlFor="email">
+        <StyledField
+          type="email"
+          {...register("email")}
+          placeholder="Email address"
+        />
+        {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
+      </Label>
+      <Label htmlFor="password">
+        <StyledField
+          type="password"
+          {...register("password")}
+          placeholder="Password"
+        />
+        {errors.password && (
+          <ErrorMessage>{errors.password.message}</ErrorMessage>
+        )}
+      </Label>
+      <LogInButton type="submit">Login</LogInButton>
+    </StyledForm>
   );
 };
 
