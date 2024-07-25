@@ -10,10 +10,6 @@
 
   --text: #DCDDDF;
 
-  --breakpoint-mobile: 375px;
-  --breakpoint-tablet: 768px;
-  --breakpoint-desktop: 1440px;
-
   --toastify-color-success: #407bff;
   --toastify-color-warning: #f1c40f;
   --toastify-color-error: #e74c3c;

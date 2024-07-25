@@ -37,6 +37,7 @@ export const StyledField = styled.input`
 
 export const ErrorMessage = styled.div`
   margin-left: 20px;
+  margin-bottom: 10px;
   color: red;
 `;
 

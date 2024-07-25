@@ -7,6 +7,7 @@ const breakpoints = {
 };
 
 export const LoginPageContainer = styled.div`
+  position: relative;
   padding: 6.4vw 5.33vw;
 
   @media (min-width: ${breakpoints.mobile}) {
@@ -53,6 +54,7 @@ export const LogoSvg = styled.img`
 `;
 
 export const Title = styled.h1`
+  position: relative;
   font-weight: 600;
   font-size: 7.5vw;
   line-height: 1.21;
@@ -70,6 +72,10 @@ export const Title = styled.h1`
     line-height: 1.11;
     margin-bottom: 50px;
     max-width: 614px;
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+    margin-bottom: 0;
   }
 `;
 
@@ -94,36 +100,25 @@ export const PillSvg = styled.img`
   display: inline-block;
   width: 25.33vw;
   height: 24.8vw;
-  top: 42.67vw;
-  right: 10.67vw;
+  top: -14.93vw;
+  right: 5.33vw;
 
   @media (min-width: ${breakpoints.mobile}) {
     width: 95px;
     height: 93px;
-    top: 160px;
-    right: 40px;
+    top: -56px;
+    right: 20px;
   }
 
   @media (min-width: ${breakpoints.tablet}) {
     width: 179px;
     height: 175px;
-    top: 168px;
-    right: 141px;
-  }
-
-  @media (min-width: ${breakpoints.desktop}) {
-    top: 194px;
-    left: 516px;
+    top: -104px;
+    right: 19px;
   }
 `;
 
 export const LoginBox = styled.div`
-  @media (min-width: ${breakpoints.mobile}) {
-  }
-
-  @media (min-width: ${breakpoints.tablet}) {
-  }
-
   @media (min-width: ${breakpoints.desktop}) {
     display: flex;
     align-items: center;
@@ -133,8 +128,30 @@ export const LoginBox = styled.div`
 
 export const BackgroundImageDiv = styled.div`
   position: absolute;
-  bottom: -23.5vw;
-  right: -49.33vw;
+  bottom: -260px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1000;
+
+  @media (min-width: ${breakpoints.mobile}) {
+    bottom: -210px;
+  }
+
+  @media (min-width: ${breakpoints.tablet}) {
+    bottom: -250px;
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+    bottom: -230px;
+  }
+`;
+
+export const BackgroundImage = styled.img`
+  position: absolute;
+  bottom: -40vw;
+  right: -54.93vw;
 
   @media (min-width: ${breakpoints.mobile}) {
     bottom: -199.11px;
@@ -151,5 +168,3 @@ export const BackgroundImageDiv = styled.div`
     right: -185.39px;
   }
 `;
-
-export const BackgroundImage = styled.img``;
